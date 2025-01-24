@@ -1,7 +1,7 @@
 # ITAssetTrackingApp
 
 ## Description
-This is an IT Asset Tracking application built using ASP.NET Core and SQL Server. It allows organizations to track and manage their IT assets, including monitors, keyboards, CPUs, and more. The app provides a user-friendly interface for asset assignment, history tracking, and reporting.
+This is an IT Asset Tracking application built using ASP.NET Core and SQL Server. It allows organizations to track and manage their IT assets, including monitors, keyboards, CPUs, and more. The app provides a user-friendly interface for asset assignment.
 
 ## Features
 - View and manage IT assets
