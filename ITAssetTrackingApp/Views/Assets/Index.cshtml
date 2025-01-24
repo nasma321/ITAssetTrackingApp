@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ITAssetTrackingApp.Models.Asset>
+
+@{
+    ViewData["Title"] = "Assets";
+}
+
+<h1>Assets</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchasedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiscardedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastReturnedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedStaff)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchasedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiscardedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastReturnedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignedStaff.Name)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.AssetId" class="btn btn-primary">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.AssetId" class="btn btn-success">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AssetId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
